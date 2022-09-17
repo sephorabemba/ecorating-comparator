@@ -65,6 +65,7 @@ st.markdown("## Compare your smartphone's Eco Rating with other devices ♻️")
 path_data = "data/ecoratings_final_v1.csv"
 df = pd.read_csv(path_data, encoding='utf-8', delimiter=",", header=0, index_col=None)
 df["model_formatted"] = df["brand"] + " " + df["model"]
+df = df.sort_values("model_formatted", ascending=True).reset_index()
 
 # select models to compare
 model_choices = df["model_formatted"].values.tolist()
@@ -72,12 +73,12 @@ model_choices = df["model_formatted"].values.tolist()
 select_model_1 = st.selectbox(
     'Select smartphone n°1',
     model_choices,
-    index=4,
+    index=2,
 )
 select_model_2 = st.selectbox(
     'Select smartphone n°2',
     model_choices,
-    index=13
+    index=16
 )
 index_model_1 = model_choices.index(select_model_1)
 index_model_2 = model_choices.index(select_model_2)
