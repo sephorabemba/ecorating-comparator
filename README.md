@@ -15,7 +15,7 @@ Eco Rating scores measure the environmental impact of smartphones on their entir
 ### Limitations today 
 However, do a quick search and you will soon see a few limitations today:
 1. Some partner operators do not display the scores in their online shops.
-2. No partner operators allow you to compare smartphones on their Eco Rating scores when browsing for a new phone. This feature is missing to really help customers make the best eco-friendly buying choices easily.
+2. No partner operators allow you to rank smartphones based on their Eco Rating scores when browsing for a new phone. This feature is missing to really help customers make the best eco-friendly buying choices easily.
 3. The sub-scores are only displayed as progress bars and not as numbers, which makes comparing each sub-criteria even more difficult between phones.
 
 ### Solution
