@@ -1,4 +1,4 @@
-# Streamlit Demo: Eco Rating Comparator
+# 📱 Streamlit Demo: Eco Rating Comparator
 
 This is a Streamlit demo app to compare Eco Rating scores for smartphones.
 

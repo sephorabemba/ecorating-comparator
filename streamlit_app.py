@@ -1,12 +1,12 @@
 """
-Streamlit app - NLLB-200 translation demo for lyrics.
+Streamlit app - Eco Rating Comparator for Smartphones
 """
 
 import pandas as pd
 import streamlit as st
 from pathlib import Path
 
-st.title("Eco Rating Comparator for Smartphones")
+st.title("📱 Eco Rating Comparator for Smartphones 🌿")
 
 st.markdown("## What is this demo? 🤔")
 st.markdown("> __*Make the most sustainable choices. Compare smartphones by Eco Rating scores with this demo app!*__")
