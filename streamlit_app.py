@@ -13,24 +13,14 @@ st.markdown("> __*Make the most sustainable choices. Compare smartphones by Eco 
 
 st.markdown("""
 
-Eco Rating scores are available online for a selection of smartphones. 
-
-### Limitations today 
-However, there are limitations today:
-1. The problem today is that each partner operator display them differently and none of them allow you to compare smartphones on the Sustainability criteria. This feature is missing to help customers make the best eco-friendly buying choices.
-2. The other limitation is that sub-scores are only displayed ad progress bars and not as numbers, which makes comparing each criteria even more difficult.
-
-### Solution
-Worry no more!
-
-This Streamlit demo is an attempt to solve these limitations. It lets you check how sustainable smartphones are and how they compare with each other easily.
+This Streamlit demo lets you check how sustainable smartphones are and how they compare with each other easily.
 
 You can compare around 30 smartphones.
 
 ### About the data
 
 1. All smartphone information and Global Eco Rating scores come from the Orange website. 
-2. Sub-scores are approximates. They were pre-computed automatically from the progress bars on the Eco Rating pictures (=> bars to scores).
+2. Sub-scores are approximates. They were pre-computed automatically by converting the progress bars on the Eco Rating pictures into the corresponding numeric sub-scores.
 """
             )
 
@@ -67,6 +57,7 @@ def generate_formatting(index_model_1, index_model_2):
 def format_score_html(score: str, color: str, size: int = 30):
     return f'<center><span style="color:{color}; font-size: {size}px;">{score}</span></center>'
 
+# ---------- Selection
 
 st.markdown("## Compare your smartphone's Eco Rating with other devices ♻️")
 
@@ -107,7 +98,7 @@ sub_criterias = {
 
 comparator = generate_formatting(index_model_1=index_model_1, index_model_2=index_model_2)
 
-# ---------- phone picture
+# ---------- Phone picture
 col1_img, col2_img = st.columns([1, 1])
 with col1_img:
     # phone
@@ -119,7 +110,7 @@ with col2_img:
     st.markdown(f"### {select_model_2} ")
     st.image(select_img_url_2)
 
-# ---------- summary
+# ---------- Summary
 st.markdown(f"### <br><center>Eco Rating Summary</center>", unsafe_allow_html=True)
 col1_brief, col2_brief = st.columns([1, 1])
 with col1_brief:
