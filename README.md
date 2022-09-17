@@ -28,7 +28,7 @@ You can compare around 30 smartphones.
 ## About the data
 
 1. All smartphone information and Global Eco Rating scores come from the Orange website. 
-2. Sub-scores are approximates. They were pre-computed automatically by converting the progress bars on the Eco Rating pictures into the corresponding numeric sub-scores.
+2. Sub-scores are approximates. They were pre-computed automatically by converting the progress bars visible on the Eco Rating pictures into the corresponding numeric sub-scores.
 
 ## How to run this demo
 
