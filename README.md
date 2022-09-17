@@ -32,7 +32,12 @@ You can compare around 30 smartphones.
 
 ## How to run this demo
 
-You can clone this repo and run the demo with:
+Click on this button to open the demo in Streamlit:
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sephorabemba-ecorating-comparator-streamlit-app-zhxwss.streamlitapp.com/)
+
+
+
+You can also clone this repo and run the demo via the following command line:
 
 ```
 streamlit run streamlit_app.py
