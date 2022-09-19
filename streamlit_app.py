@@ -3,8 +3,8 @@ Streamlit app - Eco Rating Comparator for Smartphones
 """
 
 import pandas as pd
+
 import streamlit as st
-from pathlib import Path
 
 st.title("📱 Eco Rating Comparator for Smartphones 🌿")
 
@@ -16,11 +16,6 @@ st.markdown("""
 This Streamlit demo lets you check how sustainable smartphones are and how they compare with each other easily.
 
 You can compare around 30 smartphones.
-
-### About the data
-
-1. All smartphone information and Global Eco Rating scores come from the Orange website. 
-2. Sub-scores are approximates. They were pre-computed automatically by converting the progress bars seen on the Eco Rating pictures into the corresponding numeric sub-scores.
 """
             )
 
@@ -56,6 +51,7 @@ def generate_formatting(index_model_1, index_model_2):
 
 def format_score_html(score: str, color: str, size: int = 30):
     return f'<center><span style="color:{color}; font-size: {size}px;">{score}</span></center>'
+
 
 # ---------- Selection
 
@@ -135,10 +131,10 @@ with col2_score:
 st.markdown(f"### <br><center>Scores by Criteria</center>", unsafe_allow_html=True)
 st.markdown(
     f'##### <center><span style="color:grey"><i>Generated from the above Eco Rating Summary pictures</i></span></center>',
-    unsafe_allow_html=True)
+    unsafe_allow_html=True
+)
 for col, fm in comparator.items():
     if col != "ecorating_index":
-        # st.markdown(f"##### <center>{fm['title']}</center>", unsafe_allow_html=True)
         col1_score, col2_score, col3_score = st.columns([1, 1, 1])
         with col1_score:
             st.markdown(format_score_html(score=fm["score_model_1"], color=fm["color_model_1"], size=25),
@@ -154,9 +150,7 @@ st.markdown(
     f"""### <br><center>More Info</center>
 <center>Learn about the Eco Rating methodology on   ➡️  <a href="https://www.ecoratingdevices.com/">ecoratingdevices.com</a></center>.
 """
-
     , unsafe_allow_html=True
-
 )
 col1_info, col2_info, col3_info = st.columns([1, 1, 1])
 pdp1 = df["url_pdp"][index_model_1]
@@ -167,11 +161,21 @@ rid2 = df["reparability_index_doc"][index_model_2]
 with col1_info:
     st.markdown(
         f'<center><a href="{pdp1}">{select_model_1} Page</a><br><a href="{rid1}">{select_model_1} Sheet</a></center>',
-        unsafe_allow_html=True)
+        unsafe_allow_html=True
+    )
 with col2_info:
     st.markdown(f'<center><b>Product page</b></center>', unsafe_allow_html=True)
     st.markdown(f'<center><b>Reparability index doc</b></center>', unsafe_allow_html=True)
 with col3_info:
     st.markdown(
         f'<center><a href="{pdp2}">{select_model_2} Page</a><br><a href="{rid2}">{select_model_2} Sheet</a></center>',
-        unsafe_allow_html=True)
+        unsafe_allow_html=True
+    )
+
+st.markdown("""
+### <br>About the data
+
+1. All smartphone information and Global Eco Rating scores come from the Orange website. 
+2. Sub-scores are approximates. They were pre-computed automatically by converting the progress bars seen on the Eco Rating pictures into the corresponding numeric sub-scores.
+""", unsafe_allow_html=True
+            )
